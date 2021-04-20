@@ -1,0 +1,12 @@
+{
+    "name": "gregorweindl/php_unit",
+    "authors": [
+        {
+            "name": "Gregor Weindl",
+            "email": "g.weindl@pixelpoems.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
