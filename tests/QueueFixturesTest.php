@@ -40,11 +40,11 @@ class QueueFixturesTest extends TestCase
     }
 
 
-    public function testRemovesItemFromQueue(Queue $queue): void
+    public function testRemovesItemFromQueue(): void
     {
         $this->queue->push('foo');
         $item = $this->queue->pop();
-        self::assertEquals(0, $queue->getCount());
+        self::assertEquals(0, $this->queue->getCount());
         self::assertEquals('foo', $item);
     }
 
