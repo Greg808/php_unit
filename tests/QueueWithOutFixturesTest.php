@@ -3,7 +3,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-class QueueTest extends TestCase
+class QueueWithOutFixturesTest extends TestCase
 {
     /**
      * on test method depends on another
@@ -19,7 +19,7 @@ class QueueTest extends TestCase
     /**
      * @depends testNewQueueIsEmpty
      */
-    public function testAddsItemToQueue(Queue $queue)
+    public function testAddsItemToQueue(Queue $queue): Queue
     {
         $queue->push('foo');
         self::assertEquals(1, $queue->getCount());
@@ -29,7 +29,7 @@ class QueueTest extends TestCase
     /**
      * @depends testAddsItemToQueue
      */
-    public function testRemovesItemFromQueue(Queue $queue)
+    public function testRemovesItemFromQueue(Queue $queue): void
     {
         $item = $queue->pop();
         self::assertEquals(0, $queue->getCount());
@@ -38,7 +38,7 @@ class QueueTest extends TestCase
     /**
      * @depends testAddsItemToQueue
      */
-    public function testSumsUpTheQueuedItems(Queue $queue)
+    public function testSumsUpTheQueuedItems(Queue $queue): void
     {
         $queue->push('bar');
         self::assertEquals(1, $queue->getCount());
