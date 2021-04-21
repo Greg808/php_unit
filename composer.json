@@ -6,7 +6,13 @@
             "email": "g.weindl@pixelpoems.com"
         }
     ],
+    "description": "finally i learn unit testing",
     "require-dev": {
         "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src"
+        }
     }
 }
