@@ -19,5 +19,5 @@
 
 * with the color flag you can create a colored output in your test result 
 
-``` phpunit tests --color```
+  ``` phpunit tests --color```
 
