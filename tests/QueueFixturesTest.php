@@ -54,4 +54,11 @@ class QueueFixturesTest extends TestCase
         self::assertEquals(1, $this->queue->getCount());
     }
 
+    public function testItemIsRemovedFromTheFrontOfTheQueue()
+    {
+        $this->queue->push('first');
+        $this->queue->push('second');
+        self::assertEquals('first',$this->queue->pop());
+    }
+
 }
